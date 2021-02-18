@@ -1,12 +1,13 @@
+
 #include <fstream>
-#include <vector>
+#include <iostream>
 
 using namespace std;
 
 ifstream fin("date.in");
 ofstream fout("date.out");
 
-
+/*
 void radixSort(int nr, int base, int v[], int n){
 
 
@@ -29,13 +30,20 @@ void radixSort(int nr, int base, int v[], int n){
     }
 
     int sol[n];
-    
-    
+    for (int i = 0; i < n; i++){
+        int key = (v[i] / nr) % base;
+        sol[bucket[key] - 1] = v[i];
+        bucket[key]++;
+    }
+
+    v = sol;
 
 }
+*/
 
 int main(){
 
+/*
     int n;
     fin >> n;
     int v[n];
@@ -56,6 +64,11 @@ int main(){
         nr *= base;
     }
 
+    for (int i = 0; i < n; i++){
+        fout << v[i] << " ";
+    }
+*/
+    cout<<"merge"<<"\n";
     return 0;
 }
 
