@@ -57,6 +57,15 @@ void radixSort(int nr, int base, int v[], int n){
 }
 
 
+void applyRadixSort(int v[], int n, int maxim){
+    int base = 10;
+    int nr = 1;
+    while (nr <= maxim){
+        radixSort(nr, base, v, n);
+        nr *= base;
+    }
+}
+
 int main(){
 
 
@@ -72,13 +81,7 @@ int main(){
         v[i] = x;
     }
 
-    int base = 10;
-    int nr = 1;
-
-    while (nr <= maxim){
-        radixSort(nr, base, v, n);
-        nr *= base;
-    }
+    applyRadixSort(v, n, maxim);
 
     for (int i = 0; i < n; i++){
         fout << v[i] << " ";
