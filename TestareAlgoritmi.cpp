@@ -253,9 +253,9 @@ void applyRadixSort(int v[], int n, int maxim){
 
 int main(){
 
-    int numberOfTests = 1;
-    int testSize[] = {1000, 10000, 100000};
-    int testMaxNumber[] = {100000, 1000};
+    int numberOfTests = 4;
+    int testSize[] = {100, 1000, 10000, 100000};
+    int testMaxNumber[] = {100, 100000, 1000, 100000};
 
     srand((unsigned) time(0));
 
@@ -293,7 +293,6 @@ int main(){
 
         if (true){
             /// BUBBLE SORT
-            fout << "TESTAM BUBLE SORT\n";
             auto startTime = high_resolution_clock::now(); 
             bubbleSort(aCopy, size);
             auto endTime = high_resolution_clock::now(); 
