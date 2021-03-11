@@ -3,7 +3,10 @@ Testul 0 are 10 numere, iar numarul maxim este 1000000
 
 Timp sortare standard limbaj: 0 microsecunde
 
-Timp sortare counting sort: 0 microsecunde
+Timp sortare bubble sort: 0 microsecunde
+BUBBLE SORT ESTE CORECT
+
+Timp sortare counting sort: 7995 microsecunde
 COUNTING SORT ESTE CORECT
 
 Timp sortare merge sort: 0 microsecunde
@@ -19,6 +22,9 @@ RADIX SORT ESTE CORECT
 Testul 1 are 100 numere, iar numarul maxim este 100
 
 Timp sortare standard limbaj: 0 microsecunde
+
+Timp sortare bubble sort: 0 microsecunde
+BUBBLE SORT ESTE CORECT
 
 Timp sortare counting sort: 0 microsecunde
 COUNTING SORT ESTE CORECT
@@ -37,6 +43,9 @@ Testul 2 are 1000 numere, iar numarul maxim este 10
 
 Timp sortare standard limbaj: 0 microsecunde
 
+Timp sortare bubble sort: 8033 microsecunde
+BUBBLE SORT ESTE CORECT
+
 Timp sortare counting sort: 0 microsecunde
 COUNTING SORT ESTE CORECT
 
@@ -54,6 +63,9 @@ Testul 3 are 1000 numere, iar numarul maxim este 10000
 
 Timp sortare standard limbaj: 0 microsecunde
 
+Timp sortare bubble sort: 7998 microsecunde
+BUBBLE SORT ESTE CORECT
+
 Timp sortare counting sort: 0 microsecunde
 COUNTING SORT ESTE CORECT
 
@@ -69,15 +81,18 @@ RADIX SORT ESTE CORECT
 ---------------------------------------------------------------------------------------------------
 Testul 4 are 10000 numere, iar numarul maxim este 1000
 
-Timp sortare standard limbaj: 8000 microsecunde
+Timp sortare standard limbaj: 8004 microsecunde
+
+Timp sortare bubble sort: 766969 microsecunde
+BUBBLE SORT ESTE CORECT
 
 Timp sortare counting sort: 0 microsecunde
 COUNTING SORT ESTE CORECT
 
-Timp sortare merge sort: 0 microsecunde
+Timp sortare merge sort: 7996 microsecunde
 MERGE SORT ESTE CORECT
 
-Timp sortare quick sort: 8001 microsecunde
+Timp sortare quick sort: 8002 microsecunde
 QUICK SORT ESTE CORECT
 
 Timp sortare raix sort: 0 microsecunde
@@ -88,13 +103,16 @@ Testul 5 are 10000 numere, iar numarul maxim este 100000
 
 Timp sortare standard limbaj: 0 microsecunde
 
-Timp sortare counting sort: 0 microsecunde
+Timp sortare bubble sort: 561015 microsecunde
+BUBBLE SORT ESTE CORECT
+
+Timp sortare counting sort: 7999 microsecunde
 COUNTING SORT ESTE CORECT
 
 Timp sortare merge sort: 0 microsecunde
 MERGE SORT ESTE CORECT
 
-Timp sortare quick sort: 15967 microsecunde
+Timp sortare quick sort: 23998 microsecunde
 QUICK SORT ESTE CORECT
 
 Timp sortare raix sort: 0 microsecunde
@@ -103,15 +121,18 @@ RADIX SORT ESTE CORECT
 ---------------------------------------------------------------------------------------------------
 Testul 6 are 100000 numere, iar numarul maxim este 1000
 
-Timp sortare standard limbaj: 24000 microsecunde
+Timp sortare standard limbaj: 32001 microsecunde
+
+Timp sortare bubble sort: 63011981 microsecunde
+BUBBLE SORT ESTE CORECT
 
 Timp sortare counting sort: 0 microsecunde
 COUNTING SORT ESTE CORECT
 
-Timp sortare merge sort: 16000 microsecunde
+Timp sortare merge sort: 23998 microsecunde
 MERGE SORT ESTE CORECT
 
-Timp sortare quick sort: 59623 microsecunde
+Timp sortare quick sort: 138822 microsecunde
 QUICK SORT ESTE CORECT
 
 Timp sortare raix sort: 0 microsecunde
@@ -122,32 +143,38 @@ Testul 7 are 100000 numere, iar numarul maxim este 100000
 
 Timp sortare standard limbaj: 23999 microsecunde
 
-Timp sortare counting sort: 0 microsecunde
+Timp sortare bubble sort: 64330134 microsecunde
+BUBBLE SORT ESTE CORECT
+
+Timp sortare counting sort: 7996 microsecunde
 COUNTING SORT ESTE CORECT
 
-Timp sortare merge sort: 16031 microsecunde
+Timp sortare merge sort: 24001 microsecunde
 MERGE SORT ESTE CORECT
 
-Timp sortare quick sort: 260252 microsecunde
+Timp sortare quick sort: 342445 microsecunde
 QUICK SORT ESTE CORECT
 
-Timp sortare raix sort: 8029 microsecunde
+Timp sortare raix sort: 0 microsecunde
 RADIX SORT ESTE CORECT
 
 ---------------------------------------------------------------------------------------------------
 Testul 8 are 100000 numere, iar numarul maxim este 1000000
 
-Timp sortare standard limbaj: 23969 microsecunde
+Timp sortare standard limbaj: 24013 microsecunde
+
+Timp sortare bubble sort: 64810905 microsecunde
+BUBBLE SORT ESTE CORECT
 
 Timp sortare counting sort: 0 microsecunde
 COUNTING SORT ESTE CORECT
 
-Timp sortare merge sort: 16032 microsecunde
+Timp sortare merge sort: 12335 microsecunde
 MERGE SORT ESTE CORECT
 
-Timp sortare quick sort: 229223 microsecunde
+Timp sortare quick sort: 164218 microsecunde
 QUICK SORT ESTE CORECT
 
-Timp sortare raix sort: 8014 microsecunde
+Timp sortare raix sort: 0 microsecunde
 RADIX SORT ESTE CORECT
 

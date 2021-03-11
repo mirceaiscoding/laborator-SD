@@ -286,17 +286,17 @@ int main(){
         int aCopy[size];
         copyArray(aCopy, a, size);
 
-        // if (true){
-        //     /// BUBBLE SORT
-        //     auto startTime = high_resolution_clock::now(); 
-        //     bubbleSort(aCopy, size);
-        //     auto endTime = high_resolution_clock::now(); 
-        //     auto duration = duration_cast<microseconds>(endTime - startTime); 
-        //     fout << "Timp sortare bubble sort: " << duration.count() << " microsecunde\n"; 
-        //     if( checkIfCorrectArray(aCopy, sol, size) == true){
-        //         fout << "BUBBLE SORT ESTE CORECT\n\n";
-        //     }
-        // }
+        if (true){
+            /// BUBBLE SORT
+            auto startTime = high_resolution_clock::now(); 
+            bubbleSort(aCopy, size);
+            auto endTime = high_resolution_clock::now(); 
+            auto duration = duration_cast<microseconds>(endTime - startTime); 
+            fout << "Timp sortare bubble sort: " << duration.count() << " microsecunde\n"; 
+            if( checkIfCorrectArray(aCopy, sol, size) == true){
+                fout << "BUBBLE SORT ESTE CORECT\n\n";
+            }
+        }
 
         copyArray(aCopy, a, size);
 
