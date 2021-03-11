@@ -21,36 +21,33 @@ void copyArray(int a[], int b[], int n){
     }
 }
 
-void radixSort(int nr, int base, int v[], int n){
+void radixSort(int currentPowerOfTwo, int powerOfTwo, int v[], int n){
 
 
     /// Initializez bucket-urile cu 0
-    int bucket[base];
-    for (int i = 0; i < base; i++){
+    int bucket[(1 << powerOfTwo)];
+    for (int i = 0; i < (1 << powerOfTwo); i++){
         bucket[i] = 0;
     }
 
     /// Impart numerele in buckets in functie de "cifra" curenta
     for (int i = 0; i < n; i++){
-        int key = (v[i] / nr) % base;
+        int key = ( (v[i] >> currentPowerOfTwo ) & ( (1 << powerOfTwo) - 1 ) );
         bucket[key+1]++;
     }
 
     /// Fac sume partiale pe vector pentru a afla de la ce indice trebuie
     /// sa plasez elementele cu o anumita cifra, pastrand ordinea relativa
-    for (int i = 1; i < base; i++){
+    for (int i = 1; i < (1 << powerOfTwo); i++){
         bucket[i] += bucket[i-1];
     }
 
     int sol[n];
     for (int i = 0; i < n; i++){
-        int key = (v[i] / nr) % base;
+        int key = ( (v[i] >> currentPowerOfTwo ) & ( (1 << powerOfTwo) - 1 ) );
         sol[bucket[key]] = v[i];
         bucket[key]++;
     }
-
-    cout << "sol = ";
-    afisare(sol, n);
 
     copyArray(v, sol, n);
 
@@ -58,11 +55,14 @@ void radixSort(int nr, int base, int v[], int n){
 
 
 void applyRadixSort(int v[], int n, int maxim){
-    int base = 10;
-    int nr = 1;
-    while (nr <= maxim){
-        radixSort(nr, base, v, n);
-        nr *= base;
+    int powerOfTwo = 1;
+    while ((1 << powerOfTwo) <= maxim / 2){
+        powerOfTwo++;
+    }
+    int currentPowerOfTwo = 0;
+    while ((1 << currentPowerOfTwo) <= maxim){
+        radixSort(currentPowerOfTwo, powerOfTwo, v, n);
+        currentPowerOfTwo += powerOfTwo;
     }
 }
 

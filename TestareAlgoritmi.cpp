@@ -153,12 +153,10 @@ void quickSort(vector <int> &aux){
     if (aux.size() > 1){
 
         /// Aleg 3 elemente random din aux si selectez mediana lor
-
         srand((unsigned) time(0));
         int pivot1 = aux[rand() % aux.size()];
         int pivot2 = aux[rand() % aux.size()];
         int pivot3 = aux[rand() % aux.size()];
-
         if (pivot1 > pivot2){
             swap(pivot1, pivot2);
         }
@@ -168,13 +166,10 @@ void quickSort(vector <int> &aux){
         if (pivot1 > pivot2){
             swap(pivot1, pivot2);
         }
-
         int pivot = pivot2;
-
         vector <int> low;
         vector <int> eq;
         vector <int> high;
-
         for (int i = 0; i < aux.size(); i++){
             if (aux[i] < pivot){
                 low.push_back(aux[i]);
@@ -186,14 +181,10 @@ void quickSort(vector <int> &aux){
                 high.push_back(aux[i]);
             }
         }
-
-
         /// Aplic algoritmul pentru low si high (deoarece eq este sortat deja)
         quickSort(low);
         quickSort(high);
-
         aux.clear();
-
         /// Concatenez cele 3 liste
         for (int i = 0; i < low.size(); i++){
             aux.push_back(low[i]);
@@ -209,30 +200,30 @@ void quickSort(vector <int> &aux){
 }
 
 
-void radixSort(int nr, int base, int v[], int n){
+void radixSort(int currentPowerOfTwo, int powerOfTwo, int v[], int n){
 
 
     /// Initializez bucket-urile cu 0
-    int bucket[base];
-    for (int i = 0; i < base; i++){
+    int bucket[(1 << powerOfTwo)];
+    for (int i = 0; i < (1 << powerOfTwo); i++){
         bucket[i] = 0;
     }
 
     /// Impart numerele in buckets in functie de "cifra" curenta
     for (int i = 0; i < n; i++){
-        int key = (v[i] / nr) % base;
+        int key = ( (v[i] >> currentPowerOfTwo ) & ( (1 << powerOfTwo) - 1 ) );
         bucket[key+1]++;
     }
 
     /// Fac sume partiale pe vector pentru a afla de la ce indice trebuie
     /// sa plasez elementele cu o anumita cifra, pastrand ordinea relativa
-    for (int i = 1; i < base; i++){
+    for (int i = 1; i < (1 << powerOfTwo); i++){
         bucket[i] += bucket[i-1];
     }
 
     int sol[n];
     for (int i = 0; i < n; i++){
-        int key = (v[i] / nr) % base;
+        int key = ( (v[i] >> currentPowerOfTwo ) & ( (1 << powerOfTwo) - 1 ) );
         sol[bucket[key]] = v[i];
         bucket[key]++;
     }
@@ -243,11 +234,14 @@ void radixSort(int nr, int base, int v[], int n){
 
 
 void applyRadixSort(int v[], int n, int maxim){
-    int base = 10;
-    int nr = 1;
-    while (nr <= maxim){
-        radixSort(nr, base, v, n);
-        nr *= base;
+    int powerOfTwo = 1;
+    while ((1 << powerOfTwo) <= maxim / 2){
+        powerOfTwo++;
+    }
+    int currentPowerOfTwo = 0;
+    while ((1 << currentPowerOfTwo) <= maxim){
+        radixSort(currentPowerOfTwo, powerOfTwo, v, n);
+        currentPowerOfTwo += powerOfTwo;
     }
 }
 

@@ -69,15 +69,15 @@ RADIX SORT ESTE CORECT
 ---------------------------------------------------------------------------------------------------
 Testul 4 are 10000 numere, iar numarul maxim este 1000
 
-Timp sortare standard limbaj: 0 microsecunde
+Timp sortare standard limbaj: 8000 microsecunde
 
 Timp sortare counting sort: 0 microsecunde
 COUNTING SORT ESTE CORECT
 
-Timp sortare merge sort: 7973 microsecunde
+Timp sortare merge sort: 0 microsecunde
 MERGE SORT ESTE CORECT
 
-Timp sortare quick sort: 8031 microsecunde
+Timp sortare quick sort: 8001 microsecunde
 QUICK SORT ESTE CORECT
 
 Timp sortare raix sort: 0 microsecunde
@@ -94,7 +94,7 @@ COUNTING SORT ESTE CORECT
 Timp sortare merge sort: 0 microsecunde
 MERGE SORT ESTE CORECT
 
-Timp sortare quick sort: 23998 microsecunde
+Timp sortare quick sort: 15967 microsecunde
 QUICK SORT ESTE CORECT
 
 Timp sortare raix sort: 0 microsecunde
@@ -103,15 +103,15 @@ RADIX SORT ESTE CORECT
 ---------------------------------------------------------------------------------------------------
 Testul 6 are 100000 numere, iar numarul maxim este 1000
 
-Timp sortare standard limbaj: 23999 microsecunde
+Timp sortare standard limbaj: 24000 microsecunde
 
 Timp sortare counting sort: 0 microsecunde
 COUNTING SORT ESTE CORECT
 
-Timp sortare merge sort: 43081 microsecunde
+Timp sortare merge sort: 16000 microsecunde
 MERGE SORT ESTE CORECT
 
-Timp sortare quick sort: 127067 microsecunde
+Timp sortare quick sort: 59623 microsecunde
 QUICK SORT ESTE CORECT
 
 Timp sortare raix sort: 0 microsecunde
@@ -120,34 +120,34 @@ RADIX SORT ESTE CORECT
 ---------------------------------------------------------------------------------------------------
 Testul 7 are 100000 numere, iar numarul maxim este 100000
 
-Timp sortare standard limbaj: 15997 microsecunde
+Timp sortare standard limbaj: 23999 microsecunde
 
 Timp sortare counting sort: 0 microsecunde
 COUNTING SORT ESTE CORECT
 
-Timp sortare merge sort: 18264 microsecunde
+Timp sortare merge sort: 16031 microsecunde
 MERGE SORT ESTE CORECT
 
-Timp sortare quick sort: 385668 microsecunde
+Timp sortare quick sort: 260252 microsecunde
 QUICK SORT ESTE CORECT
 
-Timp sortare raix sort: 28703 microsecunde
+Timp sortare raix sort: 8029 microsecunde
 RADIX SORT ESTE CORECT
 
 ---------------------------------------------------------------------------------------------------
 Testul 8 are 100000 numere, iar numarul maxim este 1000000
 
-Timp sortare standard limbaj: 31280 microsecunde
+Timp sortare standard limbaj: 23969 microsecunde
 
 Timp sortare counting sort: 0 microsecunde
 COUNTING SORT ESTE CORECT
 
-Timp sortare merge sort: 31237 microsecunde
+Timp sortare merge sort: 16032 microsecunde
 MERGE SORT ESTE CORECT
 
-Timp sortare quick sort: 158518 microsecunde
+Timp sortare quick sort: 229223 microsecunde
 QUICK SORT ESTE CORECT
 
-Timp sortare raix sort: 2109 microsecunde
+Timp sortare raix sort: 8014 microsecunde
 RADIX SORT ESTE CORECT
 
