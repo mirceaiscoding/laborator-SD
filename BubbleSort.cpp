@@ -9,20 +9,20 @@ ofstream fout("date.out");
 
 
 void bubbleSort(int v[], int n){
-
     int changes;
-    do {
+    for (int sortedNumbers = 0; sortedNumbers < n; sortedNumbers ++){
         changes = 0;
-        for (int i = 0; i < n-1; i++){
+        for (int i = 0; i < n-1-sortedNumbers; i++){
             if (v[i] > v[i+1]){
                 swap(v[i], v[i+1]);
                 changes++;
             }
         }
-    } while (changes != 0);
-
+        if (changes == 0){
+            return;
+        }
+    }
 }
-
 
 int main(){
 
