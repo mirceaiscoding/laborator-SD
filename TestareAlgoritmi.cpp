@@ -81,26 +81,27 @@ void bubbleSort(int v[], int n){
 }
 
 
-void countingSort(int v[], int n, int max_number){
+void countingSort(int v[], int n, int max_number, int min_number){
 
-    int f[max_number + 1];
-    for (int i = 0; i <= max_number; i++){
+    int f[max_number - min_number + 1];
+
+    for (int i = 0; i <= max_number - min_number; i++){
         f[i] = 0;
     }
 
     for (int i = 0; i < n; i++){
-        f[v[i]+1]++;
+        f[v[i] - min_number + 1]++;
     }
 
-    for (int i = 1; i <= max_number; i++){
+    for (int i = 1; i <= max_number - min_number; i++){
         f[i] += f[i-1];
     }
 
-    /// v[i] trebuie plasat in sol intre indicii f[v[i]] si f[v[i]+1]
+    /// v[i] trebuie plasat in sol intre indicii f[v[i] - min_numbber] si f[v[i] -min_number + 1]
     int sol[n];
     for (int i = 0; i < n; i++){
-        sol[f[v[i]]] = v[i];
-        f[v[i]]++;
+        sol[f[v[i] - min_number]] = v[i];
+        f[v[i] - min_number]++;
     }
 
     copyArray(v, sol, n);
@@ -253,9 +254,9 @@ void applyRadixSort(int v[], int n, int maxim){
 
 int main(){
 
-    int numberOfTests = 4;
-    int testSize[] = {100, 1000, 10000, 100000};
-    int testMaxNumber[] = {100, 100000, 1000, 100000};
+    int numberOfTests = 9;
+    int testSize[] = {10, 100, 1000, 1000, 10000, 10000, 100000, 100000, 100000};
+    int testMaxNumber[] = {1000000, 100, 10, 10000, 1000, 100000, 1000, 100000, 1000000};
 
     srand((unsigned) time(0));
 
@@ -291,24 +292,24 @@ int main(){
         int aCopy[size];
         copyArray(aCopy, a, size);
 
-        if (true){
-            /// BUBBLE SORT
-            auto startTime = high_resolution_clock::now(); 
-            bubbleSort(aCopy, size);
-            auto endTime = high_resolution_clock::now(); 
-            auto duration = duration_cast<microseconds>(endTime - startTime); 
-            fout << "Timp sortare bubble sort: " << duration.count() << " microsecunde\n"; 
-            if( checkIfCorrectArray(aCopy, sol, size) == true){
-                fout << "BUBBLE SORT ESTE CORECT\n\n";
-            }
-        }
+        // if (true){
+        //     /// BUBBLE SORT
+        //     auto startTime = high_resolution_clock::now(); 
+        //     bubbleSort(aCopy, size);
+        //     auto endTime = high_resolution_clock::now(); 
+        //     auto duration = duration_cast<microseconds>(endTime - startTime); 
+        //     fout << "Timp sortare bubble sort: " << duration.count() << " microsecunde\n"; 
+        //     if( checkIfCorrectArray(aCopy, sol, size) == true){
+        //         fout << "BUBBLE SORT ESTE CORECT\n\n";
+        //     }
+        // }
 
         copyArray(aCopy, a, size);
 
         if (true){
             /// COUNTING SORT
             auto startTime = high_resolution_clock::now(); 
-            countingSort(aCopy, size, maxim);
+            countingSort(aCopy, size, maxim, minim);
             auto endTime = high_resolution_clock::now(); 
             auto duration = duration_cast<microseconds>(endTime - startTime); 
             fout << "Timp sortare counting sort: " << duration.count() << " microsecunde\n"; 
